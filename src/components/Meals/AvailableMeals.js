@@ -31,7 +31,7 @@ const AvailableMeals = () => {
           id: key,
           name: responseData[key].name,
           description: responseData[key].description,
-          price: responseData[key].price,
+          date: responseData[key].date,
         });
       }
       setMeals(loadedMeals);
@@ -50,7 +50,7 @@ const AvailableMeals = () => {
       id={meal.id}
       name={meal.name}
       description={meal.description}
-      price={meal.price}
+      date={meal.date}
     />
   ));
 
