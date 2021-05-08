@@ -4,7 +4,7 @@ import cartContext from "../../store/cart-context";
 import classes from "./Checkout.module.css";
 
 const isEmpty = (value) => value.trim() === "";
-const isFiveChars = (value) => value.trim().length === 5;
+const isNineChars = (value) => value.trim().length === 9;
 
 const Checkout = (props) => {
   const cartCtx = useContext(cartContext);
@@ -28,10 +28,11 @@ const Checkout = (props) => {
     const enteredPostalCode = postalCodeInputRef.current.value;
     const enteredCity = cityInputRef.current.value;
 
-    const enteredNameIsValid = !isEmpty(enteredName);
+    const enteredNameIsValid =
+      !isEmpty(enteredName) && enteredName.trim().length === 10;
     const enteredStreetIsValid = !isEmpty(enteredStreet);
     const enteredCityIsValid = !isEmpty(enteredCity);
-    const enteredPostalCodeIsValid = isFiveChars(enteredPostalCode);
+    const enteredPostalCodeIsValid = isNineChars(enteredPostalCode);
 
     setFormInputsValidity({
       name: enteredNameIsValid,
@@ -76,28 +77,36 @@ const Checkout = (props) => {
   return (
     <form className={classes.form} onSubmit={confirmHandler}>
       <div className={NameInvalidClass}>
-        <label htmlFor="name">Your Number</label>
+        <label htmlFor="name">
+          Your Cellphone Number{" "}
+          <span style={{ color: "lightgray" }}>(So we could remind you)</span>
+        </label>
         <input type="text" id="name" ref={nameInputRef} />
         {!formInputValidity.name && (
-          <p className={classes.invalid}>Please Enter A Valid Name</p>
+          <p className={classes.invalid}>
+            Please Enter A Valid South African Number
+          </p>
         )}
       </div>
       <div className={StreetInvalidClass}>
-        <label htmlFor="street">Street</label>
+        <label htmlFor="street">Faculty</label>
         <input type="text" id="street" ref={streetInputRef} />
         {!formInputValidity.street && (
           <p className={classes.invalid}>Please Enter A Valid Street</p>
         )}
       </div>
       <div className={PostalCodeInvalidClass}>
-        <label htmlFor="postal">Postal Code</label>
+        <label htmlFor="postal">
+          Your Student Number{" "}
+          <span style={{ color: "lightgray" }}>(For vertification)</span>
+        </label>
         <input type="text" id="postal" ref={postalCodeInputRef} />
         {!formInputValidity.postalCode && (
           <p className={classes.invalid}>Please Enter A Valid Postal Code</p>
         )}
       </div>
       <div className={CityInvalidClass}>
-        <label htmlFor="city">City</label>
+        <label htmlFor="city">Any comments?</label>
         <input type="text" id="city" ref={cityInputRef} />
         {!formInputValidity.city && (
           <p className={classes.invalid}>Please Enter A Valid City</p>
