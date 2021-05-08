@@ -15,99 +15,104 @@ const Checkout = (props) => {
     postalCode: true,
   });
 
-  const nameInputRef = useRef();
-  const streetInputRef = useRef();
-  const postalCodeInputRef = useRef();
-  const cityInputRef = useRef();
+  const numberInputRef = useRef();
+  const facultyInputRef = useRef();
+  const studentNumberRef = useRef();
+  const commentInputRef = useRef();
 
   const confirmHandler = (event) => {
     event.preventDefault();
 
-    const enteredName = nameInputRef.current.value;
-    const enteredStreet = streetInputRef.current.value;
-    const enteredPostalCode = postalCodeInputRef.current.value;
-    const enteredCity = cityInputRef.current.value;
+    const enteredNumber = numberInputRef.current.value;
+    const enterredFaculty = facultyInputRef.current.value;
+    const enteredStudentNumber = studentNumberRef.current.value;
+    const enteredComment = commentInputRef.current.value;
 
-    const enteredNameIsValid =
-      !isEmpty(enteredName) && enteredName.trim().length === 10;
-    const enteredStreetIsValid = !isEmpty(enteredStreet);
-    const enteredCityIsValid = !isEmpty(enteredCity);
-    const enteredPostalCodeIsValid = isNineChars(enteredPostalCode);
+    const enteredNumberIsValid =
+      !isEmpty(enteredNumber) && enteredNumber.trim().length === 10;
+    const enterredFacultyIsValid = !isEmpty(enterredFaculty);
+    const enteredCommentIsValid = !isEmpty(enteredComment);
+    const enteredStudentNumberIsValid = isNineChars(enteredStudentNumber);
 
     setFormInputsValidity({
-      name: enteredNameIsValid,
-      street: enteredStreetIsValid,
-      city: enteredCityIsValid,
-      postalCode: enteredPostalCodeIsValid,
+      name: enteredNumberIsValid,
+      street: enterredFacultyIsValid,
+      city: enteredCommentIsValid,
+      postalCode: enteredStudentNumberIsValid,
     });
 
     const formIsValid =
-      enteredNameIsValid &&
-      enteredCityIsValid &&
-      enteredPostalCodeIsValid &&
-      enteredStreetIsValid;
+      enteredNumberIsValid &&
+      enteredCommentIsValid &&
+      enteredStudentNumberIsValid &&
+      enterredFacultyIsValid;
 
     if (!formIsValid) {
       return;
     }
 
     props.onConfirm({
-      name: enteredName,
-      street: enteredStreet,
-      city: enteredCity,
-      postalCode: enteredPostalCode,
+      name: enteredNumber,
+      street: enterredFaculty,
+      city: enteredComment,
+      postalCode: enteredStudentNumber,
     });
 
     cartCtx.clearCart();
   };
 
-  const NameInvalidClass = `${classes.control} ${
+  const NumberInvalidClass = `${classes.control} ${
     !formInputValidity.name && classes.invalid
   }`;
-  const StreetInvalidClass = `${classes.control} ${
+  const FacultyInvalidClass = `${classes.control} ${
     !formInputValidity.street && classes.invalid
   }`;
-  const PostalCodeInvalidClass = `${classes.control} ${
+  const StudentInvalidClass = `${classes.control} ${
     !formInputValidity.postalCode && classes.invalid
   }`;
-  const CityInvalidClass = `${classes.control} ${
+  const CommentInvalidClass = `${classes.control} ${
     !formInputValidity.city && classes.invalid
   }`;
 
   return (
     <form className={classes.form} onSubmit={confirmHandler}>
-      <div className={NameInvalidClass}>
+      <div className={NumberInvalidClass}>
         <label htmlFor="name">
           Your Cellphone Number{" "}
           <span style={{ color: "lightgray" }}>(So we could remind you)</span>
         </label>
-        <input type="text" id="name" ref={nameInputRef} />
+        <input type="text" id="name" ref={numberInputRef} />
         {!formInputValidity.name && (
           <p className={classes.invalid}>
             Please Enter A Valid South African Number
           </p>
         )}
       </div>
-      <div className={StreetInvalidClass}>
+      <div className={FacultyInvalidClass}>
         <label htmlFor="street">Faculty</label>
-        <input type="text" id="street" ref={streetInputRef} />
+        <input type="text" id="street" ref={facultyInputRef} />
         {!formInputValidity.street && (
           <p className={classes.invalid}>Please Enter A Valid Faculty</p>
         )}
       </div>
-      <div className={PostalCodeInvalidClass}>
+      <div className={StudentInvalidClass}>
         <label htmlFor="postal">
           Your Student Number{" "}
           <span style={{ color: "lightgray" }}>(For vertification)</span>
         </label>
-        <input type="text" id="postal" ref={postalCodeInputRef} />
+        <input type="text" id="postal" ref={studentNumberRef} />
         {!formInputValidity.postalCode && (
           <p className={classes.invalid}>Please Enter A Valid Student Number</p>
         )}
       </div>
-      <div className={CityInvalidClass}>
+      <div className={CommentInvalidClass}>
         <label htmlFor="city">Any comments?</label>
-        <input type="text" id="city" ref={cityInputRef} />
+        <input type="text" id="city" ref={commentInputRef} />
+        {!formInputValidity.city && (
+          <p className={classes.invalid}>
+            Please Let Us Know What You Think :-)
+          </p>
+        )}
       </div>
       <div className={classes.actions}>
         <button onClick={props.onCancel} type="button">

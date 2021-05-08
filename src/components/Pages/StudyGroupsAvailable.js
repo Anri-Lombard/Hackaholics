@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
-import MealsSummary from "../Meals/MealsSummary";
-import AvailableMeals from "../Meals/AvailableMeals";
+import MealsSummary from "../StudyGroup/StudyGroupSummary";
+import AvailableMeals from "../StudyGroup/AvailableStudyGroups";
 // import MyJoinedGroups from "../JoinedGroups/MyJoinedGroups";
 
 const StudyGroupsAvailable = () => {

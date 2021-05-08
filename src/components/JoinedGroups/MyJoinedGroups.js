@@ -1,6 +1,6 @@
 import Card from "../UI/Card";
-import MealItem from "../Meals/MealItem/MealItem";
-import classes from "../Meals/AvailableMeals.module.css";
+import MealItem from "../StudyGroup/StudyGroupItem/StudyGroupItem";
+import classes from "../StudyGroup/AvailableStudyGroups.module.css";
 
 import { useEffect, useState } from "react";
 
@@ -63,7 +63,9 @@ const AvailableMeals = () => {
   } else if (hasError) {
     content = <p className={classes.mealsError}>{hasError}</p>;
   } else if (mealsList.length === 0) {
-    content = <p className={classes.loadingMeals}>No meals were found</p>;
+    content = (
+      <p className={classes.loadingMeals}>No Study Groups Were Found</p>
+    );
   } else {
     content = <ul>{mealsList}</ul>;
   }
