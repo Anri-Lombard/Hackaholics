@@ -5,7 +5,7 @@ import StudyGroupsAvailable from "./components/Pages/StudyGroupsAvailable";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
 
-import capeTownImage from "../src/assets/capeTown.jpeg";
+import capeTownImage from "../src/assets/IMG_1689.jpeg";
 import classes from "../src/components/Layout/Header.module.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";

@@ -92,7 +92,7 @@ const Checkout = (props) => {
         <label htmlFor="street">Faculty</label>
         <input type="text" id="street" ref={streetInputRef} />
         {!formInputValidity.street && (
-          <p className={classes.invalid}>Please Enter A Valid Street</p>
+          <p className={classes.invalid}>Please Enter A Valid Faculty</p>
         )}
       </div>
       <div className={PostalCodeInvalidClass}>
@@ -102,15 +102,12 @@ const Checkout = (props) => {
         </label>
         <input type="text" id="postal" ref={postalCodeInputRef} />
         {!formInputValidity.postalCode && (
-          <p className={classes.invalid}>Please Enter A Valid Postal Code</p>
+          <p className={classes.invalid}>Please Enter A Valid Student Number</p>
         )}
       </div>
       <div className={CityInvalidClass}>
         <label htmlFor="city">Any comments?</label>
         <input type="text" id="city" ref={cityInputRef} />
-        {!formInputValidity.city && (
-          <p className={classes.invalid}>Please Enter A Valid City</p>
-        )}
       </div>
       <div className={classes.actions}>
         <button onClick={props.onCancel} type="button">

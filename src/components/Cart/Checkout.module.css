@@ -30,7 +30,7 @@
 
 .actions button {
   font: inherit;
-  color: #5a1a01;
+  color: #0061a8;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -40,18 +40,18 @@
 
 .actions button:hover,
 .actions button:active {
-  background-color: #ffe6dc;
+  background-color: #caf7e3;
 }
 
 .actions .submit {
-  border: 1px solid #5a1a01;
-  background-color: #5a1a01;
+  border: 1px solid #00adb5;
+  background-color: #00adb5;
   color: white;
 }
 
 .actions .submit:hover,
 .actions .submit:active {
-  background-color: #7a2706;
+  background-color: #77acf1;
 }
 
 .invalid {
@@ -66,3 +66,5 @@
   border-color: #aa0b20;
   background-color: #ffeff1;
 }
+
+/* #393e46 #77acf1 #00adb5 #0061a8 #77acf1 */

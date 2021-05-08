@@ -23,7 +23,7 @@
   font: inherit;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid #8a2b06;
+  border: 1px solid #00adb5;
   padding: 0.5rem 2rem;
   border-radius: 25px;
   margin-left: 1rem;
@@ -31,20 +31,22 @@
 
 .actions button:hover,
 .actions button:active {
-  background-color: #5a1a01;
-  border-color: #5a1a01;
+  background-color: #0061a8;
+  border-color: #0061a8;
   color: white;
 }
 
 .actions .button--alt {
-  color: #8a2b06;
+  color: #00adb5;
 }
 
 .actions .button {
-  background-color: #8a2b06;
+  background-color: #00adb5;
   color: white;
 }
 
 .center-text {
   text-align: center;
 }
+
+/* #393e46 #77acf1 #00adb5 #0061a8 #77acf1 */
