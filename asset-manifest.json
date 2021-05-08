@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Hackaholics/static/css/main.d1141795.chunk.css",
-    "main.js": "/Hackaholics/static/js/main.74b4de58.chunk.js",
-    "main.js.map": "/Hackaholics/static/js/main.74b4de58.chunk.js.map",
-    "runtime-main.js": "/Hackaholics/static/js/runtime-main.2314bf5a.js",
-    "runtime-main.js.map": "/Hackaholics/static/js/runtime-main.2314bf5a.js.map",
-    "static/css/2.7fc9bc2b.chunk.css": "/Hackaholics/static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.be9d73d3.chunk.js": "/Hackaholics/static/js/2.be9d73d3.chunk.js",
-    "static/js/2.be9d73d3.chunk.js.map": "/Hackaholics/static/js/2.be9d73d3.chunk.js.map",
-    "index.html": "/Hackaholics/index.html",
-    "static/css/2.7fc9bc2b.chunk.css.map": "/Hackaholics/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/css/main.d1141795.chunk.css.map": "/Hackaholics/static/css/main.d1141795.chunk.css.map",
-    "static/js/2.be9d73d3.chunk.js.LICENSE.txt": "/Hackaholics/static/js/2.be9d73d3.chunk.js.LICENSE.txt",
-    "static/media/38E6CEE7-8E43-4447-89AE-16F7F99656E9.e86d6399.png": "/Hackaholics/static/media/38E6CEE7-8E43-4447-89AE-16F7F99656E9.e86d6399.png",
-    "static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 1.9cdfdcb8.png": "/Hackaholics/static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 1.9cdfdcb8.png",
-    "static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 2.ddd49fc8.png": "/Hackaholics/static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 2.ddd49fc8.png",
-    "static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 3.3723ca83.png": "/Hackaholics/static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 3.3723ca83.png",
-    "static/media/9E643F28-7B63-4F82-8437-E4F676FBF616 1.ac1ea9ad.png": "/Hackaholics/static/media/9E643F28-7B63-4F82-8437-E4F676FBF616 1.ac1ea9ad.png",
-    "static/media/IMG_1689.f56d75bf.jpeg": "/Hackaholics/static/media/IMG_1689.f56d75bf.jpeg"
+    "main.css": "./static/css/main.2a14904f.chunk.css",
+    "main.js": "./static/js/main.68ee60fd.chunk.js",
+    "main.js.map": "./static/js/main.68ee60fd.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.88ca8597.js",
+    "runtime-main.js.map": "./static/js/runtime-main.88ca8597.js.map",
+    "static/css/2.7fc9bc2b.chunk.css": "./static/css/2.7fc9bc2b.chunk.css",
+    "static/js/2.be9d73d3.chunk.js": "./static/js/2.be9d73d3.chunk.js",
+    "static/js/2.be9d73d3.chunk.js.map": "./static/js/2.be9d73d3.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/2.7fc9bc2b.chunk.css.map": "./static/css/2.7fc9bc2b.chunk.css.map",
+    "static/css/main.2a14904f.chunk.css.map": "./static/css/main.2a14904f.chunk.css.map",
+    "static/js/2.be9d73d3.chunk.js.LICENSE.txt": "./static/js/2.be9d73d3.chunk.js.LICENSE.txt",
+    "static/media/38E6CEE7-8E43-4447-89AE-16F7F99656E9.e86d6399.png": "./static/media/38E6CEE7-8E43-4447-89AE-16F7F99656E9.e86d6399.png",
+    "static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 1.9cdfdcb8.png": "./static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 1.9cdfdcb8.png",
+    "static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 2.ddd49fc8.png": "./static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 2.ddd49fc8.png",
+    "static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 3.3723ca83.png": "./static/media/472CBF0A-A0FC-4292-AA7D-DACA8F812333 3.3723ca83.png",
+    "static/media/9E643F28-7B63-4F82-8437-E4F676FBF616 1.ac1ea9ad.png": "./static/media/9E643F28-7B63-4F82-8437-E4F676FBF616 1.ac1ea9ad.png",
+    "static/media/IMG_1689.f56d75bf.jpeg": "./static/media/IMG_1689.f56d75bf.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2314bf5a.js",
+    "static/js/runtime-main.88ca8597.js",
     "static/css/2.7fc9bc2b.chunk.css",
     "static/js/2.be9d73d3.chunk.js",
-    "static/css/main.d1141795.chunk.css",
-    "static/js/main.74b4de58.chunk.js"
+    "static/css/main.2a14904f.chunk.css",
+    "static/js/main.68ee60fd.chunk.js"
   ]
 }
