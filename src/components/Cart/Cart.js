@@ -27,10 +27,6 @@ const Cart = (props) => {
     setIsCheckout(true);
   };
 
-  const spaceHandler = () => {
-    cartCtx.reduceSpace();
-  };
-
   // TODO: Impliment error handling
   const submitOrderHandler = async (userData) => {
     setIsSubmittingState(true);
@@ -56,7 +52,6 @@ const Cart = (props) => {
           key={item.id}
           name={item.name}
           amount={item.amount}
-          reduceSpacesAvailable={spaceHandler}
           date={item.date}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
           onAdd={cartItemAddHandler.bind(null, item)}

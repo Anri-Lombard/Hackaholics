@@ -46,6 +46,7 @@ const AvailableMeals = () => {
 
   const mealsList = studyGroup.map((studyGroup) => (
     <MealItem
+      showJoin="true"
       key={studyGroup.id}
       id={studyGroup.id}
       name={studyGroup.name}
@@ -60,7 +61,7 @@ const AvailableMeals = () => {
   } else if (hasError) {
     content = <p className={classes.mealsError}>{hasError}</p>;
   } else if (mealsList.length === 0) {
-    content = <p className={classes.loadingMeals}>No meals were found</p>;
+    content = <p className={classes.loadingMeals}>No groups were found</p>;
   } else {
     content = <ul>{mealsList}</ul>;
   }

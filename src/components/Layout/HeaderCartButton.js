@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import CartIcon from "../Cart/CartIcon";
 import CartContext from "../../store/cart-context";
 import classes from "./HeaderCartButton.module.css";
+import studentcap from "../../assets/students-cap.png";
 
 const HeaderCartButton = (props) => {
   const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
@@ -36,9 +37,15 @@ const HeaderCartButton = (props) => {
   return (
     <button className={btnClasses} onClick={props.onClick}>
       <span className={classes.icon}>
-        <CartIcon />
+        <img
+          src={studentcap}
+          style={{ marginLeft: "-2rem", marginTop: "-0.5rem" }}
+          width={40}
+          height={40}
+          alt="student cap"
+        />
       </span>
-      <span>Your Cart</span>
+      <span>Your Group Picks</span>
       <span className={classes.badge}>{numberOfCartItems}</span>
     </button>
   );

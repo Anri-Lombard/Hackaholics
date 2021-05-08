@@ -1,6 +1,8 @@
 import classes from "./MealItemForm.module.css";
 
 const MealItemForm = (props) => {
+  let showTheJoinButton = props.showJoin;
+
   const submitHandler = (event) => {
     event.preventDefault();
 
@@ -9,7 +11,7 @@ const MealItemForm = (props) => {
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
-      <button>Join</button>
+      {showTheJoinButton && <button>Join</button>}
     </form>
   );
 };

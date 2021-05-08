@@ -24,7 +24,11 @@ const MealItem = (props) => {
         <div className={classes.date}>{props.date}</div>
       </div>
       <div>
-        <MealItemForm nameOfGroup={props.name} onAddToCart={addToCartHandler} />
+        <MealItemForm
+          showJoin={props.showJoin}
+          nameOfGroup={props.name}
+          onAddToCart={addToCartHandler}
+        />
       </div>
     </li>
   );

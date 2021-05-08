@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import cartContext from "../../store/cart-context";
 import classes from "./CartItem.module.css";
 
 const CartItem = (props) => {
+  const cartCtx = useContext(cartContext);
   const date = props.date;
 
   return (
@@ -12,7 +15,6 @@ const CartItem = (props) => {
           className={classes.summary}
         >
           <span className={classes.price}>{date}</span>
-          <span>{props.spacesAvailable} spaces left</span>
         </div>
       </div>
     </li>

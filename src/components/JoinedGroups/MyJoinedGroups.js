@@ -26,16 +26,16 @@ const AvailableMeals = () => {
 
       const loadedMeals = [];
 
-      const i = 0;
       for (const key in responseData) {
-        const shortForm = responseData[key]["orderedItems"][`${i}`];
-        console.log("loop");
-        loadedMeals.push({
-          id: key,
-          name: shortForm["name"],
-          description: shortForm["description"],
-          date: shortForm["date"],
-        });
+        for (var i = 0; i < responseData[key]["orderedItems"].length; i++) {
+          console.log(responseData[key]["orderedItems"][`${i}`].name);
+          loadedMeals.push({
+            id: Math.random(),
+            name: responseData[key]["orderedItems"][`${i}`].name,
+            description: responseData[key]["orderedItems"][`${i}`].description,
+            date: responseData[key]["orderedItems"][`${i}`].date,
+          });
+        }
       }
       setStudyGroup(loadedMeals);
       setIsLoading(false);
