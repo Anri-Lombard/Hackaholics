@@ -1,5 +1,5 @@
 import Card from "../UI/Card";
-import StudyMealItem from "./StudyGroupItem/StudyGroupItem";
+import StudyGroupItem from "./StudyGroupItem/StudyGroupItem";
 import classes from "./AvailableStudyGroups.module.css";
 
 import { useEffect, useState } from "react";
@@ -44,14 +44,14 @@ const AvailableStudyGroups = () => {
     });
   }, []);
 
-  const studyGroupList = studyGroup.map((studyGroup) => (
-    <StudyMealItem
+  const studyGroupList = studyGroup.map((group) => (
+    <StudyGroupItem
       showJoin="true"
-      key={studyGroup.id}
-      id={studyGroup.id}
-      name={studyGroup.name}
-      description={studyGroup.description}
-      date={studyGroup.date}
+      key={group.id}
+      id={group.id}
+      name={group.name}
+      description={group.description}
+      date={group.date}
     />
   ));
 

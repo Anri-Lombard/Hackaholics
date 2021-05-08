@@ -1,14 +1,14 @@
 import { Fragment } from "react";
 
-import MealsSummary from "../StudyGroup/StudyGroupSummary";
-import AvailableMeals from "../StudyGroup/AvailableStudyGroups";
+import StudyGroupsSummary from "../StudyGroup/StudyGroupSummary";
+import AvailableStudyGroups from "../StudyGroup/AvailableStudyGroups";
 // import MyJoinedGroups from "../JoinedGroups/MyJoinedGroups";
 
 const StudyGroupsAvailable = () => {
   return (
     <Fragment>
-      <MealsSummary />
-      <AvailableMeals />
+      <StudyGroupsSummary />
+      <AvailableStudyGroups />
       {/* <MyJoinedGroups /> */}
     </Fragment>
   );

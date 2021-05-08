@@ -1,4 +1,4 @@
-import classes from "./StudyGroupItem.module.css";
+import classes from "./StudyGroupItemForm.module.css";
 
 const MealItemForm = (props) => {
   let showTheJoinButton = props.showJoin;
