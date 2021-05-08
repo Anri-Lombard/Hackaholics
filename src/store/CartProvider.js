@@ -5,6 +5,7 @@ import CartContext from "./cart-context";
 const defaultCartState = {
   items: [],
   totalAmount: 0,
+  spacesAvailable: 10,
 };
 
 const cartReducer = (state, action) => {
@@ -51,6 +52,7 @@ const cartReducer = (state, action) => {
     return {
       items: updatedItems,
       totalAmount: updatedTotalAmount,
+      spacesAvailable: state.spacesAvailable,
     };
   }
 
@@ -58,6 +60,14 @@ const cartReducer = (state, action) => {
     return defaultCartState;
   }
 
+  if (action.type === "LESSSPACE") {
+    const updatedSpaces = state.spacesAvailable - 1;
+    return {
+      items: state.items,
+      totalAmount: state.totalAmount,
+      spacesAvailable: updatedSpaces,
+    };
+  }
   return defaultCartState;
 };
 
@@ -79,12 +89,18 @@ const CartProvider = (props) => {
     dispatchCartAction({ type: "CLEAR" });
   };
 
+  const reduceSpaceHandler = () => {
+    dispatchCartAction({ type: "LESSSPACE" });
+  };
+
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
+    spacesAvailable: cartState.spacesAvailable,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
     clearCart: clearCartHandler,
+    reduceSpace: reduceSpaceHandler,
   };
 
   return (

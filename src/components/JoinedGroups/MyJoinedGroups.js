@@ -1,6 +1,6 @@
 import Card from "../UI/Card";
-import MealItem from "./MealItem/MealItem";
-import classes from "./AvailableMeals.module.css";
+import MealItem from "../Meals/MealItem/MealItem";
+import classes from "../Meals/AvailableMeals.module.css";
 
 import { useEffect, useState } from "react";
 
@@ -15,7 +15,7 @@ const AvailableMeals = () => {
     setIsLoading(true);
     const fetchMeals = async () => {
       const response = await fetch(
-        "https://react-http-7bd76-default-rtdb.firebaseio.com/meals.json"
+        "https://react-http-7bd76-default-rtdb.firebaseio.com/orders.json"
       );
 
       if (!response.ok) {
@@ -26,12 +26,15 @@ const AvailableMeals = () => {
 
       const loadedMeals = [];
 
+      const i = 0;
       for (const key in responseData) {
+        const shortForm = responseData[key]["orderedItems"][`${i}`];
+        console.log("loop");
         loadedMeals.push({
           id: key,
-          name: responseData[key].name,
-          description: responseData[key].description,
-          date: responseData[key].date,
+          name: shortForm["name"],
+          description: shortForm["description"],
+          date: shortForm["date"],
         });
       }
       setStudyGroup(loadedMeals);

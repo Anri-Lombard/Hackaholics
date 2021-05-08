@@ -12,7 +12,7 @@ const Cart = (props) => {
   const [didSumbit, setDidSubmit] = useState(false);
   const cartCtx = useContext(CartContext);
 
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const totalAmount = cartCtx.items.length;
   const hasItems = cartCtx.items.length > 0;
 
   const cartItemRemoveHandler = (id) => {
@@ -27,11 +27,15 @@ const Cart = (props) => {
     setIsCheckout(true);
   };
 
+  const spaceHandler = () => {
+    cartCtx.reduceSpace();
+  };
+
   // TODO: Impliment error handling
   const submitOrderHandler = async (userData) => {
     setIsSubmittingState(true);
 
-    const response = await fetch(
+    await fetch(
       "https://react-http-7bd76-default-rtdb.firebaseio.com/orders.json",
       {
         method: "POST",
@@ -52,7 +56,8 @@ const Cart = (props) => {
           key={item.id}
           name={item.name}
           amount={item.amount}
-          price={item.date}
+          reduceSpacesAvailable={spaceHandler}
+          date={item.date}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
           onAdd={cartItemAddHandler.bind(null, item)}
         />
@@ -67,7 +72,7 @@ const Cart = (props) => {
       </button>
       {hasItems && (
         <button onClick={orderHandler} className={classes.button}>
-          Order
+          Join
         </button>
       )}
     </div>
@@ -77,7 +82,7 @@ const Cart = (props) => {
     <React.Fragment>
       {cartItems}
       <div className={classes.total}>
-        <span>Total Amount</span>
+        <span>Total Study Groups</span>
         <span>{totalAmount}</span>
       </div>
       {isCheckout ? (
@@ -88,11 +93,11 @@ const Cart = (props) => {
     </React.Fragment>
   );
 
-  const isSubmittingModalConstant = <p>Sending order data...</p>;
+  const isSubmittingModalConstant = <p>Joining study group...</p>;
 
   const didSubmitModalContent = (
     <React.Fragment>
-      <p>Successfully sent the order!</p>
+      <p>Successfully joined the group(s). See you there!</p>
       <div className={classes.actions}>
         <button className={classes.button} onClick={props.onClose}>
           Close

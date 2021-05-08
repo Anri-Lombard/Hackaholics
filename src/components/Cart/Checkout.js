@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
+import cartContext from "../../store/cart-context";
 
 import classes from "./Checkout.module.css";
 
@@ -6,6 +7,7 @@ const isEmpty = (value) => value.trim() === "";
 const isFiveChars = (value) => value.trim().length === 5;
 
 const Checkout = (props) => {
+  const cartCtx = useContext(cartContext);
   const [formInputValidity, setFormInputsValidity] = useState({
     name: true,
     street: true,
@@ -54,6 +56,8 @@ const Checkout = (props) => {
       city: enteredCity,
       postalCode: enteredPostalCode,
     });
+
+    cartCtx.clearCart();
   };
 
   const NameInvalidClass = `${classes.control} ${
@@ -72,7 +76,7 @@ const Checkout = (props) => {
   return (
     <form className={classes.form} onSubmit={confirmHandler}>
       <div className={NameInvalidClass}>
-        <label htmlFor="name">Your Name</label>
+        <label htmlFor="name">Your Number</label>
         <input type="text" id="name" ref={nameInputRef} />
         {!formInputValidity.name && (
           <p className={classes.invalid}>Please Enter A Valid Name</p>
