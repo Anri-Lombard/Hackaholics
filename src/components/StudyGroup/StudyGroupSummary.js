@@ -5,7 +5,7 @@ const StudyGroupSummary = () => {
     <section className={classes.summary}>
       <h2>Meet With Your Fellow Students</h2>
       <p>Take your education back into your own hands.</p>
-      <p>This is an app for student by students.</p>
+      <p>This is an app for students by students.</p>
     </section>
   );
 };
