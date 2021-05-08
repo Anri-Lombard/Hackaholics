@@ -39,7 +39,7 @@ const Users = () => {
   );
 
   const paragraph2 = (
-    <div data-aos="fade-left" className={styles.thought}>
+    <div data-aos="fade-up" className={styles.thought}>
       No one knows from whence she came;
       <br /> Covid-19, we cannot tame
       <br /> But alas do not despair
@@ -49,7 +49,7 @@ const Users = () => {
   );
 
   const paragraph3 = (
-    <div data-aos="fade-right" className={styles.thought}>
+    <div data-aos="fade-up" className={styles.thought}>
       Yes it has lectures and tests
       <br /> And assignments, unwanted guests
       <br /> Before your entire world crashes
@@ -59,7 +59,7 @@ const Users = () => {
   );
 
   const paragraph4 = (
-    <div data-aos="flip-left" className={styles.thought}>
+    <div data-aos="fade-up" className={styles.thought}>
       Hello, welcome to UC-Me!
       <br />
       That needed kinship, we can guarantee
@@ -90,21 +90,21 @@ const Users = () => {
         />
         {paragraph1}
         <img
-          data-aos="fade-left"
+          data-aos="fade-up"
           alt="speech bubble"
           className={styles.images}
           src={SecondPicture}
         />
         {paragraph2}
         <img
-          data-aos="fade-right"
+          data-aos="fade-up"
           alt="speech bubble"
           className={styles.images}
           src={ThirdPicture}
         />
         {paragraph3}
         <img
-          data-aos="flip-left"
+          data-aos="fade up"
           alt="speech bubble"
           className={styles.images}
           src={FourthPicture}
